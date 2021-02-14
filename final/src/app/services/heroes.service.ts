@@ -12,6 +12,7 @@ export class HeroesService {
 
   //private url = 'https://pcaheroes-default-rtdb.firebaseio.com';
   private url= 'https://finalpca-2f031-default-rtdb.firebaseio.com';
+  
   constructor(private httpCliente: HttpClient) { }
   
   getHeroes() {

@@ -1,0 +1,34 @@
+<ion-card color="dark">
+    <ion-card-header>
+        <ion-card-subtitle>
+
+
+            <span class="text-primary" *ngIf="tipo =='H'"> Heroe:</span>
+            <span class="text-primary" *ngIf="tipo =='V'"> Villano:</span>
+            <span class="noticia-source-name">{{ personaje.nombre }} </span>
+
+
+            <div class="noticia-more" *ngIf="!esfavorito">
+                <ion-button (click)="lanzarMenup(personaje,tipo)" fill="clear">
+                    <ion-icon slot="icon-only" name="caret-down-circle"></ion-icon>
+                </ion-button>
+            </div>
+
+
+        </ion-card-subtitle>
+        <IonItem>
+            <IonButton fill="outline" slot="end">Poder: {{personaje.poder}}</IonButton>
+        </IonItem>
+        <!--
+<ion-card-title (click)="abrirPagina()"> {{ noticia.title }} </ion-card-title>
+-->
+    </ion-card-header>
+
+    <ion-img [src]="personaje.foto" *ngIf="personaje.foto"></ion-img>
+
+    <ion-card-content>
+        <p>
+            {{ personaje.descripcion }}
+        </p>
+    </ion-card-content>
+</ion-card>

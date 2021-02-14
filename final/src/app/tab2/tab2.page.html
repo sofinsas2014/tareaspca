@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Villanos
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Villanos</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-row>
+        <ion-col *ngFor="let villano of villanos; let i = index; " size="12" size-lg="3" size-md="4" size-sm="2" size-xs="12">
+            <app-personaje [personaje]=villano [tipo]=tipo></app-personaje>
+        </ion-col>
+    </ion-row>
+
+    <!--
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+  -->
+</ion-content>
